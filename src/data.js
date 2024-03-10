@@ -2,7 +2,6 @@ import React from "react";
 import { MarkerType } from "reactflow";
 import CharteredAccountancyLink1 from './direct/CharteredAccountancyLink1';
 import CptLink from "./direct/CptLink";
-import CaInter from "./direct/CaInter";
 import ArticleLink from "./direct/ArticleLink";
 import CaFinal from "./direct/CaFinal";
 import Hyref from "./Hyref";
@@ -29,12 +28,7 @@ export const nodes = [[
       label:  <CptLink/>
     },
     position: { x: 400, y: 100 },
-    // style: {
-    //   background: "#D6D5E6",
-    //   color: "#333",
-    //   border: "1px solid #222138",
-    //   width: 180,
-    // },
+   
   },
   {
     id: "4",
@@ -130,12 +124,7 @@ export const nodes = [[
     label:  "Custom and Indirect Taxes (Branch 2)"
   },
   position: { x: 400, y: 100 },
-  // style: {
-  //   background: "#D6D5E6",
-  //   color: "#333",
-  //   border: "1px solid #222138",
-  //   width: 180,
-  // },
+
 },
 {
   id: "4",
@@ -182,12 +171,7 @@ export const nodes = [[
       label:  <Hyref link="https://unacademy.com/content/neet-ug/notification/eligibility/" label="Eligibility"/>
     },
     position: { x: 400, y: 100 },
-    // style: {
-    //   background: "#D6D5E6",
-    //   color: "#333",
-    //   border: "1px solid #222138",
-    //   width: 180,
-    // },
+   
   },
   {
     id: "4",
@@ -237,12 +221,7 @@ export const nodes = [[
       label:  <Hyref link="https://www.simplilearn.com/project-management" label="Project Management Professional (NOT NECESSARY)"/>
     },
     position: { x: 400, y: 100 },
-    // style: {
-    //   background: "#D6D5E6",
-    //   color: "#333",
-    //   border: "1px solid #222138",
-    //   width: 180,
-    // },
+   
   },
   {
     id: "4",
@@ -267,7 +246,104 @@ export const nodes = [[
     position: { x: 250, y: 425 },
   },
  
-]
+],
+[
+  {
+    id: "1",
+    type: "input",
+    data: {
+      label: "Passinoate in Maths",
+    },
+    position: { x: 250, y: 0 },
+  },
+  {
+    id: "2",
+
+    data: {
+      label: <Hyref link="https://www.pw.live/exams/jee/jee-main-eligibility-criteria/" label="Eligibility"/> 
+    },
+    position: { x: 100, y: 100 },
+  },
+  {
+    id: "3",
+    data: {
+      label:  <Hyref link="https://collegedunia.com/exams/jee-main/cutoff" label="Cuttoff Range(Category Wise)"/>
+    },
+    position: { x: 400, y: 100 },
+   
+  },
+  {
+    id: "4",
+    position: { x: 250, y: 200 },
+    data: {
+      label: <Hyref link="https://www.vedantu.com/jee-main/topics" label="Study Materials and Topics"/>
+    },
+  },
+  {
+    id: "5",
+    data: {
+      label: "Cracking JEE Mains"
+    },
+    position: { x: 250, y: 325 },
+  },
+  {
+    id: "6",
+    type: "output",
+    data: {
+      label: "IIT'S , NIT'S or Tier 2,Tier 3 college(4 years)"
+    },
+    position: { x: 250, y: 425 },
+  },
+ 
+],
+[
+  {
+  id: "1",
+  type: "input",
+  data: {
+    label: "Bachelor's Degree in Any Field from Recognised University",
+  },
+  position: { x: 250, y: 0 },
+},
+{
+  id: "2",
+
+  data: {
+    label: <Hyref link="https://byjusexamprep.com/upsc-exam/ips-eligibility#toc-1" label="Eligibility"/>
+  },
+  position: { x: 100, y: 100 },
+},
+{
+  id: "3",
+  data: {
+    label:  <Hyref link="https://byjusexamprep.com/upsc-exam/ips-eligibility#toc-2" label="Qualification"/>
+  },
+  position: { x: 400, y: 100 },
+
+},
+{
+  id: "4",
+  position: { x: 250, y: 200 },
+  data: {
+    label: "Age limit from 21 to 32 (Varies Based On Category)"
+  },
+},
+{
+  id: "5",
+  data: {
+    label:  <Hyref link="https://youtu.be/G4YRTTfLPxY?si=dozELy5pJzt0rNhi" label="UPSC Prelims and Mains"/>
+  },
+  position: { x: 250, y: 325 },
+},
+{
+  id: "6",
+  type: "output",
+  data: {
+    label: <Hyref link="https://youtu.be/OhJWg-0qdI0?si=3s6TkIzfAfh0iA3h" label="Interview And Selection"/>
+  },
+  position: { x: 250, y: 425 },
+}],
+
 ];
 
 
@@ -368,14 +444,56 @@ export const edges = [[
   },
 
 ],[
-  { id: "e1-2", source: "1", target: "2", label: "Branch 1" },
-  { id: "e1-3", source: "2", target: "3" ,label:"Branch 2"},
-  {id: "e1-5", source: "3", target: "4", label:"Minimum CuTT OFF"},
+  { id: "e1-2", source: "1", target: "2"},
+  { id: "e1-3", source: "2", target: "3"},
+  {id: "e1-5", source: "3", target: "4"},
   {
     id: "e4-5",
     source: "4",
     target: "5",
-    label:"Max Attempts (6)",
+    markerEnd: {
+      type: MarkerType.ArrowClosed,
+    },
+  },
+  {
+    id: "e5-6",
+    source: "5",
+    target: "6",
+    type: "smoothstep",
+    
+  },
+
+],
+[
+  { id: "e1-2", source: "1", target: "2"},
+  { id: "e1-3", source: "2", target: "3"},
+  {id: "e1-5", source: "3", target: "4"},
+  {
+    id: "e4-5",
+    source: "4",
+    target: "5",
+    markerEnd: {
+      type: MarkerType.ArrowClosed,
+    },
+  },
+  {
+    id: "e5-6",
+    source: "5",
+    target: "6",
+    type: "smoothstep",
+    
+  },
+
+],
+
+[
+  { id: "e1-2", source: "1", target: "2"},
+  { id: "e1-3", source: "2", target: "3"},
+  {id: "e1-5", source: "3", target: "4"},
+  {
+    id: "e4-5",
+    source: "4",
+    target: "5",
     markerEnd: {
       type: MarkerType.ArrowClosed,
     },

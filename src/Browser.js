@@ -5,7 +5,6 @@ import "./index.css";
 function Browser(props) {
   let title = "";
 
-  // Convert props.index to a number before comparison
   const index = parseInt(props.index);
 
   if (index === 0) {
@@ -18,6 +17,10 @@ function Browser(props) {
     title = "Medicine"
   } else if (index === 4){
     title = "Management Consultant"
+  } else if (index === 5){
+    title = "Engineering"
+  } else if (index === 6){
+    title = "IPS Officer"
   }
 
   return (

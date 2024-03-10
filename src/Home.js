@@ -1,6 +1,6 @@
 import React from 'react'
 import "./styles.css"; 
-import img2 from'./2544.jpg'
+import img2 from'./img/2544.jpg'
 import { Link } from 'react-router-dom';
 const Home = () => {
   return (
@@ -13,34 +13,44 @@ const Home = () => {
         <img src={img2} alt="" height="450px" className='' />
       </div>
       <div className='col'>
-      
-      <Link to="/0" className='c1'>
-          
-          Chartered Accountant
-      </Link>
+          <Link to="/0" className='c1'>
+              
+              Chartered Accountant
+          </Link>
 
-      <Link to="/1" className="c1">
+          <Link to="/1" className="c1">
 
-        Certified Management Accounting
-      </Link>
+            Certified Management Accounting
+          </Link>
 
-      <Link to="/2" className='c1'>
-          
-          Management Consultant
-      </Link>
+          <Link to="/2" className='c1'>
+              
+              IRS Officer
+          </Link>
 
-      <Link to="/3" className='c1'>
-          
-          IRS Officer
-      </Link>
-
-  
-        <div className='c1'>Pilot</div>
-        <br /> <br />
-        <div className='c1'>Medicine</div>
-        <br /> <br />
-    
+          <Link to="/3" className='c1'>
+              
+              Medicine
+          </Link>
       </div>
+      <br />
+      <div className='col'>
+          <Link to="/4" className='c1'>
+              
+              Management Consultant
+          </Link>
+
+          <Link to="/5" className='c1'>
+              Engineering
+          </Link>
+
+          <Link to="/6" className='c1'>
+              IPS Officer
+          </Link>
+         
+      </div>
+      <br />
+
     </div>
   )
 }
